@@ -1,21 +1,16 @@
-﻿using System;
+﻿using CSharpCurso;
+using System;
 using System.Globalization;
+using System.Reflection.Metadata;
 
-namespace Curso
+namespace CSharpCursoIntroducao
 {
     class Program
     {
         static void Main()
         {
-            Console.Write("Digite sua senha: ");
-            double senha = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            while (senha != 2002)
-            {
-                Console.WriteLine("Senha inválida, tente novamente!");
-                senha = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            }
-            Console.WriteLine("Acesso permitido!");
+            ExecicioRaizes execicioRaizes = new ExecicioRaizes();
+            execicioRaizes.RaizesDoNumero();
         }
     }
 }
